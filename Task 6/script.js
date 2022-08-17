@@ -1,3 +1,5 @@
+'use strict'
+
 /* ------------------------------ TASK 6 -----------------------------------
 Turimas "users" masyvas. 
 
@@ -19,3 +21,25 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30 },
   { id: '9', name: 'Daniel Cane', age: 51 },
 ];
+
+
+
+
+
+function getUserAverageAge(arr) {
+
+  const getAge = arr.map((obj) => obj.age)
+  const avgAge = getAge.reduce((total, age) => total + age, 0) / arr.length
+  return avgAge.toFixed(0)
+}
+console.log('getUserAverageAge(users) --->', getUserAverageAge(users));
+
+
+function getUsersNames(arr) {
+  let newArr = []
+  const getNames = arr.map((obj) => obj.name)
+  newArr.push(getNames)
+  return newArr
+}
+
+console.log('getUsersNames --->', getUsersNames(users));
