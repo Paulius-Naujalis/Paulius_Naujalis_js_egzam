@@ -5,3 +5,14 @@ subtraction(a, b) - priima du skaičius ir grąžina jų skirtumą.
 multiplication(a, b) - priima du skaičius ir grąžina jų daugybos rezultatą;
 division(a, b) - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
+
+
+function Calculator(a, b) {
+    this.sum = a + b;
+    this.substraction = a - b;
+    this.multiplication = a * b;
+    this.division = a / b
+}
+
+const nums1 = new Calculator(10, 5)
+console.log('nums1 --->', nums1);

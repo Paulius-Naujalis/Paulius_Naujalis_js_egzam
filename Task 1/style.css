@@ -51,11 +51,48 @@ form {
   background-color: #000;
   color: #fff;
 }
+.output{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin: auto auto;
+}
 
+.output h3{
+  background-color: white;
+  padding: 8px;
+  margin: 0 15px;
+  text-align: center;
+  }
+  header{
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: #f7f7f7;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 23px;
+  }
+  footer{
+    padding: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+  }
 /* Tablet */
 @media screen and (min-width: 768px) {
   .headline {
-    font-size: 3.5em;
+    font-size: 2.5em;
+  }
+  header{
+    padding: 20px 0;
+    font-size: 26px;
+  }
+  .output h3{
+    font-size: 24px;
+    margin: 10px 5px;
+    padding: 15px;
   }
 
   #search,

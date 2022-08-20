@@ -1,3 +1,13 @@
+/* Commons */
+/*  */
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.hide {
+  display: none;
+}
+
 /* Resets */
 * {
   margin: 0;
@@ -6,15 +16,16 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 }
-
 /* Mobile first */
+body{
+  background-color: #222;
+}
 .wrapper {
   min-height: 100vh;
   min-width: calc(100vw - (100vw - 100%));
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #222;
 }
 
 .btn-container {
@@ -25,14 +36,15 @@
 }
 
 .btn-container #btn {
-  margin: 50px 0;
-  padding: 15px 25px;
+  margin: 80px 0;
+  padding: 35px 55px;
   background-color: #474747;
   border: #222;
   color: #fff;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 38px;
   text-align: center;
+  border-radius: 12px;
 }
 
 .btn-container #btn:hover {
@@ -50,12 +62,193 @@
 
 .output-cointainer h1 {
   color: #fff;
+  font-size: 35px;
 }
 
 .output-cointainer #output {
-  width: 80%;
+  width: 90%;
   margin-top: 25px;
-  padding: 30px;
+  padding: 10px;
   border-radius: 5px;
   background-color: #fff;
 }
+
+
+
+/* Mobile */
+
+header{
+  background-color:#868686;
+  padding: 35px 0;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0px 5px 10px 3px rgba(134,134,134,0.5);
+}
+.message{
+  font-size: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+.card__img img{
+  width: 90px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.card {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border: 2px solid gray;
+  border-radius: 12px;
+  margin: 10px 0;
+}
+.card__info{
+  width: 100%;
+}
+.card__info h3 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.card__info a{
+  font-size: 15px;
+}
+.card__info i{
+font-size: 17px;
+margin-left: 5px;
+}
+.rights {
+  padding: 5px 0;
+  background-color: #a9a9a9;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+  color: #474747;
+}
+
+/* Tablet */
+
+@media screen and (min-width: 426px) {
+  .output-cointainer #output{
+    padding: 10px 0;
+  }
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  .card{
+    margin: 5px 5px;
+  }
+  .card__info{
+    width: 100%;
+  }
+  .card__info a{
+    font-size: 14px;
+  }
+  .card__info i{
+    padding-right: 0 5px;
+  font-size: 16px;
+  }
+  .card__info h3{
+    font-size: 20px;
+  }
+  .btn-container #btn{
+    margin: 50px 0;
+  padding: 30px 50px;
+  font-size: 32px;
+  }
+  .output-cointainer h1{
+    font-size: 40px;
+  }
+  header{
+    padding: 25px 0;
+  font-size: 25px;
+  }
+}
+
+/* Laptop */
+
+@media screen and (min-width: 769px) {
+  .grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card__img img{
+    width: 100px;
+  }
+  .card__info a{
+    font-size: 15px;
+  }
+  .card__info i{
+    padding: 0 5px;
+  font-size: 18px;
+  }
+  .btn-container #btn{
+    margin: 50px 0;
+  padding: 20px 40px;
+  font-size: 26px;
+  }
+  .output-cointainer h1{
+    font-size: 30px;
+  }
+  header{
+    padding: 20px 0;
+  font-size: 20px;
+  }
+  .rights{
+    padding: 5px 0;
+  }
+}
+/* Desktop */
+@media screen and (min-width: 1441px) {
+  .grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .card__img img{
+    width: 130px;
+  }
+  .card__info h3{
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .card__info i{
+    padding: 0 5px;
+  font-size: 22px;
+  }
+  .output-cointainer h1{
+    font-size: 40px;
+  }
+  .message{
+    font-size: 24px;
+  }
+  .btn-container #btn{
+    margin: 80px 0;
+  padding: 40px 60px;
+  font-size: 32px;
+  }
+  header{
+    padding: 30px 0;
+  font-size: 25px;
+  }
+  .rights{
+    padding: 8px;
+    font-size: 16px;
+  }
+}
+/* divEl.className = 'card'
+        divEl.innerHTML = `
+        <div class="card__img">
+        <img src="${obj.avatar_url}" alt="user_avatar">
+        </div>
+        <div class="card__info">
+        <h3>
+        ${obj.login}
+        </h3>
+        <p>
+        <i class="fa-brands fa-github"></i>
+        <a href="${obj.html_url}">${obj.html_url}</a>
+        <p>
+        </div>
+        ` */
