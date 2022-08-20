@@ -119,6 +119,7 @@ header{
 }
 .card__info i{
 font-size: 17px;
+margin-left: 5px;
 }
 .rights {
   padding: 5px 0;
@@ -148,7 +149,7 @@ font-size: 17px;
     font-size: 14px;
   }
   .card__info i{
-    padding: 0 5px;
+    padding-right: 0 5px;
   font-size: 16px;
   }
   .card__info h3{
